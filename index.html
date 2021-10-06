@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://fonts.googleapis.com/css?family=Baloo Da 2' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheeHoe.com</title>
+</head>
+<body>
+    <div id="container">
+        <section id="nav-bar">
+            <div id="logo" ><a href="#homepage"><img src="ch.png"></a></div>
+            <ul id="navbar-list">
+                <li><a href="#about-me" onclick="closeMenu()">ABOUT ME</a></li>
+                <li><a href="#skills" onclick="closeMenu(), fillUp()">SKILLS</a></li>
+                <li><a href="#projects" onclick="closeMenu()">PROJECTS</a></li>
+                <li><a href="#getintouch" onclick="closeMenu()">CONTACT</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="burger-lines"></div>  
+            </div>
+
+        </section>
+
+        <section id="homepage">
+            <div id="homepage-content">
+                <h1>Hello, my name is Chee Hoe</h1>
+                <p class="subtitle">Welcome to my website!</p>
+            </div>
+            
+            <div id="homepage-button">
+                <a href="#about-me">ABOUT ME</a>
+                <a href="#getintouch">CONTACT ME</a>
+            </div>
+            
+        </section>
+
+        <section id="about-me">
+            <div class="title">
+                <h1>About Me</h1>
+                <div class="title-line"></div>
+            </div>
+            <div id="about-me-content">
+                <div id="about-me-text">
+                    <p>| FREELANCER |</p>
+                    <p>Turning your ideas into a reality. We will incorporate our strategies and plannings in developing the content you seek.</p>
+                    <p>| WEB DEVELOPER |</p>
+                    <p>Specializes in Front-End Development (HTML,CSS,JS) to create web application.</p>
+                    <p>| ENGINEER |</p>
+                    <p>Utilizes problem solving skills to ensure your website runs smoothly always. </p>
+                </div>
+                <div id="about-me-design">
+
+                </div>
+                
+                
+            </div>
+            <div id="button-holder">
+                <div class="circle"><a href="#homepage">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+                </div>
+                <div class="circle" onclick="fillUp()"><a href="#skills"><i class="fas fa-arrow-down"></i></a></div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="title black">
+                <h1>skills</h1>
+                <div class="title-line blackline"></div>
+            </div>
+            <div id="skills-content">
+                <div class="content-holder">
+                    <h2>html</h2>
+                    <div class="skill-bar">
+                        <div id="skill-level" class="skill-level HTML"></div>
+                    </div>
+                </div>
+                <div class="content-holder">
+                    <h2>css</h2>
+                    <div class="skill-bar">
+                        <div id="skill-level" class="skill-level CSS"></div>
+                    </div>
+                </div>
+                <div class="content-holder">
+                    <h2>javascript</h2>
+                    <div class="skill-bar">
+                        <div id="skill-level" class="skill-level JS"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="button-holder">
+                <div class="circle skillbtn"><a href="#about-me">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+                </div>
+                <div class="circle skillbtn" ><a href="#projects"><i class="fas fa-arrow-down"></i></a></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="title">
+                <h1>projects</h1>
+                <div class="title-line"></div>
+            </div>
+            <div id="projects-content">
+                <div id="slider">
+                    <div class="slides">
+                        <!--Radio Button-->
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        
+
+                        <!--Slide Images-->
+                        <div class="slide first">
+                            <h1><a href="projects/piano/index.html" target="_blank">Piano Keys</a></h1>
+                        </div>
+                        <div class="slide second">
+                            <h1><a href="projects/audioplayer/index.html" target="_blank">Audio Player</a></h1>
+                        </div>
+                        <div class="slide third">
+                            <h1><a href="projects/todolist/index.html" target="_blank">To Do List</a></h1>
+                        </div>
+
+                    </div>
+                    <!-- Manual Navigation-->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </div>
+                </div>
+            </div>
+            <div id="button-holder">
+                <div class="circle projectbtn" onclick="fillUp()"><a href="#skills">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+                </div>
+                <div class="circle projectbtn" ><a href="#getintouch"><i class="fas fa-arrow-down"></i></a></div>
+            </div>
+
+        </section>
+
+        <section id="getintouch">
+            
+            <div class="title black">
+                <h1>get in touch</h1>
+                <div class="title-line blackline"></div>
+            </div>
+            <div id="contacts-content">
+                <div id="details-holder">
+                    <div class="details">
+                        <i class="fas fa-phone"></i>
+                        <p>019-630 2309</p>
+                    </div>
+                    <div class="details">
+                        <i class="fas fa-envelope"></i>
+                        <p>calvinwongch95@gmail.com</p>
+                    </div>
+                    <div class="details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Seremban, Malaysia</p>
+                    </div>    
+                </div>
+                <form id="contact-form">
+                    <label for='contact-name'>name</label><br>
+                    <input type='text' id="contact-name" name="contact-name"><br>
+                    <label for='contact-email'>e-mail</label><br>
+                    <input type='email' id="contact-email" name="contact-email"><br>
+                    <label for='contact-message'>message</label><br>
+                    <input type='text' id="contact-message" name="contact-message"><br>
+                    <button id="submitBtn" onclick="messageSent()">submit</button>
+                </form>
+                
+            </div>
+            <div id="button-holder">
+                <div class="circle contactsbtn" ><a href="#projects">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+                </div>
+                <div class="circle contactsbtn" ><a href="#homepage"><i class="fas fa-angle-double-up"></i></a></div>
+            </div>
+        </section>  
+
+        <section id="footer"></section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
