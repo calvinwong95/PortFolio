@@ -69,7 +69,7 @@ html, body {
     display: none;
    
 
-    transition: all 3s ease-in-out ;
+    transition: all 1s ease-in-out ;
 }
 
 .hamburger-menu:hover{
@@ -130,6 +130,8 @@ ul {
     justify-content: space-between;
     align-items: center;
 
+    opacity: 0;
+    transition: all 1.5s ease-in;
     
 }
 
@@ -233,7 +235,9 @@ ul li:hover {
 }
 
 #homepage h1::before {
-    background  : gray;
+    /* background-image : linear-gradient(right, #8F8F8F, #949494, #979797);
+    z-index: 5; */
+    background: #949494;
     animation: typewriter 4s steps(25) 1s forwards;
 }
 #homepage h1::after {
@@ -275,7 +279,7 @@ ul li:hover {
     height: 30%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     opacity: 0;
     animation: fadeInOut 2s ease 6s forwards;
@@ -302,6 +306,10 @@ ul li:hover {
     transition: all ease-in-out 1s;
 }
 
+#homepage-button a:nth-child(2) {
+    display: none;
+}
+
 
 /*HOMEPAGE SECTION END*/
 
@@ -310,7 +318,7 @@ ul li:hover {
     width: 100%;
     height: 100vh;
     background-color: black;
-    padding: 100px 30px;
+    padding: 80px 30px;
     box-sizing: border-box;
     
     display: flex;
@@ -344,7 +352,7 @@ ul li:hover {
     width: 100%;
     max-width: 800px;
     height: 80%;
-    background-color: gray;
+    background-color: white;
     padding: 20px;
     box-sizing: border-box;
     align-self: center; 
@@ -370,19 +378,68 @@ ul li:hover {
 #about-me-design{
     width: 50%;
     height: 50%;
-    background-color: lightblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#about-me-design p {
+    font-family: var(--text-font-family);
+    transition: all 2s ease-in-out;
+}
+#first-message {
+    display: block;
+    transition: all 2s ease-in-out;
+}
+#second-message {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 2s ease-in-out;
+}
+
+#third-message {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 1s ease-in-out;
+}
+
+.fadeInOut {
+    animation: fadeInOut 1s ease-in-out forwards;
+
 }
 
 #button-holder {
     width: 150px;
     height: 100px;
-
+    margin-top: 20px;
     align-self: center;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+
+    transition:all 1s ease-in;
+}
+
+#button-holder-aboutme {
+    width: 150px;
+    height: 100px;
+    margin-top: 20px;
+    align-self: center;
+
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    transition:all 1s ease-in;
 }
 
 .circle {
@@ -398,6 +455,36 @@ ul li:hover {
 
 .circle:hover {
     opacity: 1;
+}
+
+#wheel {
+    
+    width: 100px;
+    height: 100px;
+    
+}
+
+.spin {
+    -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+   
+}
+
+.spin-faster {
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin {
+    100%{-webkit-transform: rotate(360deg);}
 }
 
 
@@ -418,8 +505,12 @@ ul li:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    
+    display:none;
 
 }
+
+
 
 .black {
     background-color: black;
@@ -569,6 +660,7 @@ ul li:hover {
     align-items: flex-start;
 
     transition: all 2s ease-in-out;
+    display: none;
 
 }
 
@@ -707,6 +799,7 @@ ul li:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    display: none;
 
     transition: all 2s ease-in-out;
 }
@@ -793,7 +886,7 @@ input {
 .contactsbtn {
     align-self: center;
     background-color: black;
-    opacity: 0.1;
+    opacity: 0.2;
 }
 .contactsbtn i {
     color: white;

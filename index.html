@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheeHoe.com</title>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,11 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="styles.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CheeHoe.com</title>
+    
 </head>
 <body>
     <div id="container">
@@ -34,12 +35,12 @@
         <section id="homepage">
             <div id="homepage-content">
                 <h1>Hello, my name is Chee Hoe</h1>
-                <p class="subtitle">Welcome to my website!</p>
+                <p class="subtitle">To learn more about me, click the button below</p>
             </div>
             
             <div id="homepage-button">
                 <a href="#about-me">ABOUT ME</a>
-                <a href="#getintouch">CONTACT ME</a>
+                <a id="contact-me-btn" href="#getintouch">CONTACT ME</a>
             </div>
             
         </section>
@@ -51,20 +52,23 @@
             </div>
             <div id="about-me-content">
                 <div id="about-me-text">
-                    <p>| FREELANCER |</p>
-                    <p>Turning your ideas into a reality. We will incorporate our strategies and plannings in developing the content you seek.</p>
-                    <p>| WEB DEVELOPER |</p>
-                    <p>Specializes in Front-End Development (HTML,CSS,JS) to create web application.</p>
-                    <p>| ENGINEER |</p>
+                    <p><b>| FREELANCER |</b></p>
+                    <p>Turning your ideas into a reality. We will incorporate our strategies and plannings in developing the content you seek.</p><br>
+                    <p><b>| WEB DEVELOPER |</b></p>
+                    <p>Specializes in Front-End Development (HTML,CSS,JS) to create web application.</p><br>
+                    <p><b>| ENGINEER |</b></p>
                     <p>Utilizes problem solving skills to ensure your website runs smoothly always. </p>
                 </div>
                 <div id="about-me-design">
-
+                    <img id="wheel" src="wheel.png" onclick="spin()">
+                    <p id="first-message"><b>Click To Initialize Data</b></p>
+                    <p id="second-message">Retrieving Data</p>
+                    <p id=third-message><b>Website Running at 100%</b></p>
                 </div>
                 
                 
             </div>
-            <div id="button-holder">
+            <div id="button-holder-aboutme">
                 <div class="circle"><a href="#homepage">
                     <i class="fas fa-arrow-up"></i>
                 </a>
@@ -124,13 +128,13 @@
 
                         <!--Slide Images-->
                         <div class="slide first">
-                            <h1><a href="projects/piano/index.html" target="_blank">Piano Keys</a></h1>
+                            <h1><a href="https://calvinwong95.github.io/Invoke_Day11/" target="_blank">Piano Keys</a></h1>
                         </div>
                         <div class="slide second">
-                            <h1><a href="projects/audioplayer/index.html" target="_blank">Audio Player</a></h1>
+                            <h1><a href="https://calvinwong95.github.io/Invoke_Day09/" target="_blank">Audio Player</a></h1>
                         </div>
                         <div class="slide third">
-                            <h1><a href="projects/todolist/index.html" target="_blank">To Do List</a></h1>
+                            <h1><a href="https://calvinwong95.github.io/Invoke_Day12/" target="_blank">To Do List</a></h1>
                         </div>
 
                     </div>
@@ -180,7 +184,7 @@
                     <input type='email' id="contact-email" name="contact-email"><br>
                     <label for='contact-message'>message</label><br>
                     <input type='text' id="contact-message" name="contact-message"><br>
-                    <button id="submitBtn" onclick="messageSent()">submit</button>
+                    <button id="submitBtn" onclick="messageSent(),save()">submit</button>
                 </form>
                 
             </div>
@@ -196,7 +200,10 @@
         <section id="footer"></section>
 
     </div>
-
+    <!-- firebase app-->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+    <!-- firebase real time -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
