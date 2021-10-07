@@ -6,6 +6,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheeHoe.com</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Major Mono Display' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +30,7 @@
                 <li><a href="#projects" onclick="closeMenu()">PROJECTS</a></li>
                 <li><a href="#getintouch" onclick="closeMenu()">CONTACT</a></li>
             </ul>
-            <div class="hamburger-menu">
+            <div id="hamburger-menu" class="hamburger-menu">
                 <div class="burger-lines"></div>  
             </div>
 
@@ -63,7 +67,7 @@
                     <img id="wheel" src="wheel.png" onclick="spin()">
                     <p id="first-message"><b>Click To Initialize Data</b></p>
                     <p id="second-message">Retrieving Data</p>
-                    <p id=third-message><b>Website Running at 100%</b></p>
+                    <p id="third-message"><b>Website Running at 100%</b></p>
                 </div>
                 
                 
@@ -78,9 +82,9 @@
         </section>
 
         <section id="skills">
-            <div class="title black">
-                <h1>skills</h1>
-                <div class="title-line blackline"></div>
+            <div onclick="colorDodge()" class="title black">
+                <h1  id='skills-font'>skills</h1>
+                <div id='skills-title-line' class="title-line blackline"></div>
             </div>
             <div id="skills-content">
                 <div class="content-holder">

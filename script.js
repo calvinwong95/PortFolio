@@ -38,6 +38,7 @@ function save() {
 
 
 var hamburgerMenu = document.querySelector(".hamburger-menu");
+var hamburgerID = document.getElementById('hamburger-menu');
 var navbarList = document.getElementById("navbar-list");
 var submitBtn = document.getElementById('submitBtn');
 var skillLevel = document.querySelectorAll('.skill-level');
@@ -48,10 +49,12 @@ var thirdMsg = document.getElementById('third-message')
 var skills = document.getElementById('skills');
 var projects = document.getElementById('projects');
 var getintouch = document.getElementById('getintouch');
+var homepage = document.getElementById('homepage');
 var homepageBtn = document.getElementById('homepage-button');
 var contactmeBtn = document.getElementById('contact-me-btn');
 var buttonHolderAboutMe = document.getElementById('button-holder-aboutme');
 var i = 0;
+var running = false;
 let openBurger = false;
 let spinning = false;
 
@@ -94,7 +97,7 @@ function fillUp() {
         skillLevel[0].classList.remove('skill-animationHTML');
         skillLevel[1].classList.remove('skill-animationCSS');
         skillLevel[2].classList.remove('skill-animationJS');
-    }, 2500);
+    }, 3000);
 }
 
 function spin() {
@@ -116,7 +119,8 @@ function spin() {
             contactmeBtn.style.display='flex';
             homepageBtn.style.justifyContent='space-between';
             buttonHolderAboutMe.style.opacity='1';
-        },3000)
+            hamburgerID.style.opacity ='1';
+        },2000)
     } else {
         wheel.classList.remove('spin-faster');
         wheel.classList.remove('spin');
@@ -129,5 +133,40 @@ function spin() {
     }
     
 
+
+}
+
+function colorDodge() {
+    var elems  = document.querySelectorAll('.title');
+    var font = document.querySelectorAll('.black h1');
+    var titleLine = document.querySelectorAll('.blackline');
+    if (running == false) {
+        homepage.style.filter = 'none';
+
+        for ( var j = 0 ; j < elems.length; j++) {
+        elems[j].classList.add('newtitle');
+        
+        }
+
+        for ( var k = 0 ; k < 2; k++) {
+        font[k].style.color ="black";
+        titleLine[k].style.backgroundColor ="black";
+        }
+        running = true;
+    } else {
+        
+        homepage.style.filter = 'grayscale(100%)';
+        for ( var j = 0 ; j < elems.length; j++) {
+            elems[j].classList.remove('newtitle');
+            
+        }
+    
+        for ( var k = 0 ; k < 2; k++) {
+        font[k].style.color ="white";
+        titleLine[k].style.backgroundColor ="white";
+        running = false;
+
+        }
+    }
 
 }
